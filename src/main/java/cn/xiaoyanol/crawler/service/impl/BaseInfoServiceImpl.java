@@ -22,7 +22,7 @@ import java.util.HashMap;
  * @Time: 下午10:22
  */
 public class BaseInfoServiceImpl implements IBaseInfoService {
-    @Override
+
     public BaseInfoJsonRootBean getBaseInfoResult(String companyId) {
         try {
             if (StringUtils.isBlank(companyId)) {

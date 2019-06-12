@@ -24,21 +24,21 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        ISearchService searchService = new SearchServiceImpl();
+/*        ISearchService searchService = new SearchServiceImpl();
         SearchJsonRootBean searchResult = searchService.getSearchResult("阿里巴巴");
         Gson searchJson = new GsonBuilder().setPrettyPrinting().create();;
 
-        System.out.println(searchJson.toJson(searchResult));
+        System.out.println(searchJson.toJson(searchResult));*/
 
 
         IBaseInfoService baseInfoService = new BaseInfoServiceImpl();
-        BaseInfoJsonRootBean baseInfoResult = baseInfoService.getBaseInfoResult("1698375");
+        BaseInfoJsonRootBean baseInfoResult = baseInfoService.getBaseInfoResult("91110108MA004LLR05");
 
         Gson baseInoJson = new GsonBuilder().setPrettyPrinting().create();;
         System.out.println(baseInoJson.toJson(baseInfoResult));
 
 
-        List<List> excelData= new ArrayList<List>();
+      /*  List<List> excelData= new ArrayList<List>();
         List<Object> dataList = new ArrayList<Object>();
         dataList.add(baseInfoResult.getData().getName());
         dataList.add(baseInfoResult.getData().getLegalInfo().getName());
@@ -48,6 +48,6 @@ public class Main {
         rowNames.add("公司名");
         rowNames.add("法人信息");
         ExcelExportUtils excelExportUtils = new ExcelExportUtils(rowNames, excelData);
-        excelExportUtils.exportData();
+        excelExportUtils.exportData();*/
     }
 }
